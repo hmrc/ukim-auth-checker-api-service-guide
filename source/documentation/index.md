@@ -3,7 +3,7 @@ title: UKIMS API Service Guide
 weight: 1
 description: Software developers, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
 ---
-Version 1.0 issued 1 April 15 2024
+Version 1.0 issued April 15 2024
 
 # API Service Guide
 This initial discovery document shows developers and other users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party operators.
