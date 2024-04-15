@@ -74,7 +74,7 @@ Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to GET method in UKIMS v1.0 Reference Guide [here](/resources/public/api/conf/1.0/application.yaml)
+Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
 
 
 ### Example of a GET request
