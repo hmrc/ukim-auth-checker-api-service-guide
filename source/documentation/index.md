@@ -13,7 +13,7 @@ This initial discovery document shows developers and other users how to use the 
 This API allows Fast Parcel Operators (FPOs) and 3rd party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single GET method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. You can use the API to send both small (up to 5MB in size) and large (up to 8MB in size) messages. 
+The API is based on REST principles with a single GET method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -45,7 +45,6 @@ This version of the UKIMS API:
 ### Use the API to:
 
 - Request the UKIM Authorization Status of 1-3000 EORIs passed as an array.
-- You can use the API to send both small (up to 5MB in size) and large (up to 8MB in size) messages.
 
 The API endpoint relates only to Great Britain and Northern Ireland.  Eventually, you can also use the HMRC sandbox environment to run tests for Great Britain and Northern Ireland transit movements.
 
