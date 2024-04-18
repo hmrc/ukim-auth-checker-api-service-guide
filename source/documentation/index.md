@@ -81,7 +81,7 @@ Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/
 Example of cURL script with URL and query parameters
 
 ```curl
-curl --location 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=2024-02-31&eoris=GB123123123123,GB123123123123,GB123123123123'
+curl --location GET 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=2024-02-31&eoris=GB123123123123,GB123123123123,GB123123123123'
 ```
 
 Example of a succesful response
