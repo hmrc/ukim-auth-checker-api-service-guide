@@ -1,7 +1,7 @@
 ---
 title: UKIMS API Service Guide
 weight: 1
-description: Software developers, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
+description: For Fast Parcel Operatos (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party Software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
 ---
 Version 1.0 issued April 15 2024
 
