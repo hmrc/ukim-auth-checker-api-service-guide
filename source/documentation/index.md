@@ -65,8 +65,8 @@ Making API requests
 Before sending any requests to UKIMS API v1.0, you should ensure that you are using in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see  UKIMS API v1.0 reference
-- The base URLs of the sandbox and production environments are as follows:
 
+The base URLs of the sandbox and production environments are as follows:
 
 Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 
