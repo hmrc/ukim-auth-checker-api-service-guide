@@ -1,12 +1,12 @@
 ---
 title: UKIMS API Service Guide
 weight: 1
-description: Software developers, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
+description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
 ---
 Version 1.0 issued April 15 2024
 
 # API Service Guide
-This initial discovery document shows developers and other users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party operators.
+This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party operators.
 
 ## API Overview 
 
@@ -65,8 +65,8 @@ Making API requests
 Before sending any requests to UKIMS API v1.0, you should ensure that you are using in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see  UKIMS API v1.0 reference
-- The base URLs of the sandbox and production environments are as follows:
 
+The base URLs of the sandbox and production environments are as follows:
 
 Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 
@@ -81,14 +81,14 @@ Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/
 Example of cURL script with URL and query parameters
 
 ```curl
-curl --location 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=2024-02-31&eoris=GB123123123123,GB123123123123,GB123123123123'
+curl --location GET 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
 ```
 
 Example of a succesful response
 
 ```code
 {
-  "date": "2024-02-31",
+  "date": "31-02-2024",
   "eoris": [
     {
       "eori": "GB123123123123",
