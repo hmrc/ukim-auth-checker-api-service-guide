@@ -13,7 +13,7 @@ This initial discovery document shows developers and other third party users how
 This API allows Fast Parcel Operators (FPOs) and 3rd party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single GET method endpoint that returns data in JSON format. It uses standard HTTP error response codes. You can use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
+The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. You can use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -61,21 +61,23 @@ Before sending any requests to UKIMS API v1.0, you should ensure that you are us
 - the correct header contents and payload information - see  UKIMS API v1.0 reference
 
 The base URLs of the sandbox and production environments are as follows:
-
-Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
-
-Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+```code
+Sandbox  https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+```
+```code
+Production  https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+```
 
 ### Validating a collection of EORI numbers
 
-Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
+Link to POST method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
 
 
-### Example of a GET request
+### Example of a POST request
 Example of cURL script with URL and query parameters
 
 ```curl
-curl --location GET 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
+curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
 ```
 
 Example of a succesful response
