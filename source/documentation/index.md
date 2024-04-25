@@ -13,7 +13,7 @@ This initial discovery document shows developers and other third party users how
 This API allows Fast Parcel Operators (FPOs) and 3rd party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single GET method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
+The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -74,14 +74,20 @@ Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
+Link to POST method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
 
 
-### Example of a GET request
-Example of cURL script with URL and query parameters
+### Example of a POST request
+Example of cURL script 
 
 ```curl
-curl --location GET 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
+curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+{
+"date": "2024-02-31",
+"eoris": [
+"GB123123123333"
+]
+}
 ```
 
 Example of a succesful response
