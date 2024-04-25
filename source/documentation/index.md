@@ -49,13 +49,13 @@ To develop using the UKIMS API you must:
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
 - add at least one sandbox application on the Developer Hub
-- Each application you register will be assigned an HMRC ApplicationId.
+- each application you register will be assigned an HMRC ApplicationId.
 
 You can view all the applications you have registered on the Developer Hub Applications page where you can administer API subscriptions and application credentials.
 
 ## Getting started
 
-Making API requests
+### Making API requests
 Before sending any requests to UKIMS API v1.0, you should ensure that you are using in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see  UKIMS API v1.0 reference
@@ -74,13 +74,13 @@ Link to POST method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc
 
 
 ### Example of a POST request
-Example of cURL script with URL and query parameters
+Example of a cURL script with URL and query parameters:
 
 ```curl
 curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
 ```
 
-Example of a succesful response
+Example of a succesful response:
 
 ```code
 {
