@@ -85,7 +85,7 @@ curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-m
 {
 "date": "2024-02-31",
 "eoris": [
-"GB123123123333"
+"GB123123123123"
 ]
 }
 ```
