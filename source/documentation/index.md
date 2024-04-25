@@ -94,7 +94,7 @@ Example of a succesful response
 
 ```code
 {
-  "date": "31-02-2024",
+  "date": "2024-02-31",
   "eoris": [
     {
       "eori": "GB123123123123",
