@@ -1,4 +1,4 @@
 ->      /                                                  health.Routes
-GET     /guides/ukim-auth-checker-api-service-guide           controllers.Default.redirect(to = "/guides/example-service-guide/")
+GET     /guides/ukim-auth-checker-api-service-guide           controllers.Default.redirect(to = "/guides/ukim-auth-checker-api-service-guide/")
 GET     /guides/ukim-auth-checker-api-service-guide/          controllers.Assets.at(path="/public", file="index.html")
 GET     /guides/ukim-auth-checker-api-service-guide/*file     controllers.Assets.at(path="/public", file)
