@@ -55,7 +55,7 @@ To develop using the UKIMS API you must:
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
 - add at least one sandbox application on the Developer Hub
-- Each application you register will be assigned an HMRC ApplicationId.
+- each application you register will be assigned an HMRC ApplicationId.
 
 You can view all the applications you have registered on the Developer Hub Applications page where you can administer API subscriptions and application credentials.
 
