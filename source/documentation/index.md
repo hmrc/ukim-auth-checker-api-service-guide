@@ -1,19 +1,19 @@
 ---
-title: UKIMS API Service Guide
+title: United Kingdom Internal Market Scheme (UKIMS) API Service Guide
 weight: 1
 description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
 ---
 Version 1.0 issued April 15 2024
 
-# API Service Guide
-This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party operators.
+# United Kingdom Internal Market Scheme (UKIMS) API Service Guide
+This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
 
-This API allows Fast Parcel Operators (FPOs) and 3rd party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
+This API allows Fast Parcel Operators (FPOs) and third party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single GET method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorization Status of between 1 to 3000 EORIs passed as an array. 
+The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -44,7 +44,7 @@ This version of the UKIMS API:
 
 ### Use the API to:
 
-- Request the UKIM Authorization Status of 1-3000 EORIs passed as an array.
+- Request the UKIM Authorisation Status of 1-3000 EORIs passed as an array.
 
 The API endpoint relates only to Great Britain and Northern Ireland.  Eventually, you can also use the HMRC sandbox environment to run tests for Great Britain and Northern Ireland transit movements.
 
@@ -55,14 +55,16 @@ To develop using the UKIMS API you must:
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
 - add at least one sandbox application on the Developer Hub
-- Each application you register will be assigned an HMRC ApplicationId.
 
-You can view all the applications you have registered on the Developer Hub Applications page where you can administer API subscriptions and application credentials.
+  **Note:** For each application you register, you will be assigned an HMRC ApplicationId.
+
+You can view all the applications you have registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
 
 ## Getting started
 
 Making API requests
-Before sending any requests to UKIMS API v1.0, you should ensure that you are using in your software:
+Before sending any requests to UKIMS API v1.0, make sure that you are using the following points
+in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see  UKIMS API v1.0 reference
 
@@ -74,21 +76,27 @@ Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to GET method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
+Link to POST method in UKIMS v1.0 Reference Guide [here](https://github.com/hmrc/ukim-auth-checker-api/blob/UIMS-37-SerGuid1/resources/public/api/conf/1.0/application.yaml)
 
 
-### Example of a GET request
-Example of cURL script with URL and query parameters
+### Example of a POST request
+Example of cURL script 
 
 ```curl
-curl --location GET 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations?date=31-02-2024&eoris=GB123123123123,GB123123123123,GB123123123123'
+curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+{
+"date": "2024-02-31",
+"eoris": [
+"GB123123123123"
+]
+}
 ```
 
 Example of a succesful response
 
 ```code
 {
-  "date": "31-02-2024",
+  "date": "2024-02-31",
   "eoris": [
     {
       "eori": "GB123123123123",
@@ -100,7 +108,7 @@ Example of a succesful response
 ```
 ## Error Responses
 
-An introduction to the expected Success and Error Reponses:
+An introduction to the expected Success and Error Responses:
 
 ```code
 200
@@ -147,6 +155,6 @@ Internal Server Error. The server has encountered a situation it does not know h
 ## API rate limiting
 Each software house should register a single application with HMRC. This application will be used to identify the software house during the OAuth 2.0 grant flow and will also be used in subsequent per user API calls. We limit the number of requests that each application can make. This protects our backend service against excessive load and encourages real-time API calls over batch processing.
 
-We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team.
+We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team at email SDSTeam@hmrc.gov.uk
 
 
