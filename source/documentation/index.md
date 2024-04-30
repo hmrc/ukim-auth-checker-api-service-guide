@@ -5,8 +5,8 @@ description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, 
 ---
 Version 1.0 issued April 30 2024
 
-# United Kingdom Internal Market Scheme (UKIMS) API Service Guide
-This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
+# United Kingdom Internal Market Scheme (UKIMS) Checker API Service Guide
+This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) Checker API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
 
