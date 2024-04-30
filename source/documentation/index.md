@@ -1,12 +1,12 @@
 ---
-title: United Kingdom Internal Market Scheme (UKIMS) Checker API Service Guide
+title: UK Internal Market Scheme (UKIMS) Auhorisation Checker API Service Guide
 weight: 1
 description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
 ---
 Version 1.0 issued April 30 2024
 
-# United Kingdom Internal Market Scheme (UKIMS) Checker API Service Guide
-This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) Checker API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
+# UK Internal Market Scheme (UKIMS) Auhorisation Checker API Service Guide
+This document shows how the API allows FPOs and and other third party users to check EORI numbers. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
 
@@ -48,9 +48,6 @@ To develop using the UKIMS API you must:
 
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
-- add at least one sandbox application on the Developer Hub
-
-  **Note:** For each application you register, you will be assigned an HMRC ApplicationId.
 
 You can view all the applications you have registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
 
@@ -86,7 +83,7 @@ curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-m
 }
 ```
 
-Example of a succesful response
+Example of a succesful response:
 
 ```code
 {
@@ -99,7 +96,16 @@ Example of a succesful response
   ]
 }
 
+An example of unsuccessfull response:
+
+```code
+{
+"code": "MISSING_CREDENTIALS",
+"message": "Authentication information is not provided"
+}
+
 ```
+
 ## Error Responses
 
 An introduction to the expected Success and Error Responses:
