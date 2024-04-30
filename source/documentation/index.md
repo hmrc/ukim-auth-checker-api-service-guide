@@ -17,12 +17,6 @@ The API is based on REST principles with a single POST method endpoint that retu
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
-### User Interface
-
-The page for the User Input Interface is shown below. 
-
-[User Screen](/https://github.com/hmrc/ukim-auth-checker-api-service-guide/tree/Service-Guide-1/source/images/Screenshot_2024-04-09_152315.png)
-
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU) 12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
 
