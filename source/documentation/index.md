@@ -1,12 +1,12 @@
 ---
-title: United Kingdom Internal Market Scheme (UKIMS) API Service Guide
+title: United Kingdom Internal Market Scheme (UKIMS) Checker API Service Guide
 weight: 1
-description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity
+description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
 ---
-Version 1.0 issued April 15 2024
+Version 1.0 issued April 30 2024
 
-# United Kingdom Internal Market Scheme (UKIMS) API Service Guide
-This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
+# United Kingdom Internal Market Scheme (UKIMS) Checker API Service Guide
+This initial discovery document shows developers and other third party users how to use the UK Internal Market Scheme (UKIMS) Checker API together with their software. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
 
@@ -16,12 +16,6 @@ The aim is to avoid possible rejections of goods moving through from GB-NI, whic
 The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
-
-### User Interface
-
-The page for the User Input Interface is shown below. 
-
-[User Screen](/https://github.com/hmrc/ukim-auth-checker-api-service-guide/tree/Service-Guide-1/source/images/Screenshot_2024-04-09_152315.png)
 
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU) 12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
