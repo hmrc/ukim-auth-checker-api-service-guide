@@ -6,7 +6,7 @@ description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, 
 Version 1.0 issued April 30 2024
 
 # UK Internal Market Scheme (UKIMS) Auhorisation Checker API Service Guide
-This document shows how this API allows Fast Parcel Operators (FPOs) and and other third party users to check EORI numbers. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
+This API allows Fast Parcel Operators (FPOs) and other third party users to check the authorisation of EORI numbers. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
 
