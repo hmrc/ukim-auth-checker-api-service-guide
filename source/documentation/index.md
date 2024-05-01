@@ -93,6 +93,7 @@ Example of a succesful response:
     }
   ]
 }
+```
 
 An example of an unsuccessful response:
 
@@ -101,7 +102,6 @@ An example of an unsuccessful response:
 "code": "MISSING_CREDENTIALS",
 "message": "Authentication information is not provided"
 }
-
 ```
 
 ## Error Responses
