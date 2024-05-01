@@ -67,7 +67,7 @@ Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in  UKIMS Checker API v1.0 Reference Guide [here](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page)
+Link to POST method in  UKIMS Checker API v1.0 Reference Guide [here](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
 
 ### Example of a POST request
 
