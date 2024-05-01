@@ -94,7 +94,7 @@ Example of a succesful response:
   ]
 }
 
-An example of an unsuccessfull response:
+An example of an unsuccessful response:
 
 ```code
 {
