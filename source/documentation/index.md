@@ -123,6 +123,12 @@ Validation failure. The server cannot or will not process the request due to som
 ```
 
 ```code
+401
+description:
+Unauthorised. Authentication information is not provided.
+```                }
+
+```code
 403
 description:
 Forbidden. The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server.
