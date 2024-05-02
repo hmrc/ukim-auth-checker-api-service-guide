@@ -6,11 +6,11 @@ description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, 
 Version 1.0 issued May 2 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
-This API allows Fast Parcel Operators (FPOs) and other third party users to check the authorisation of EORI numbers. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
+This document introduces Fast Parcel Operators (FPOs), software developers and other third party users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIM validity.
 
 ## API Overview 
 
-This API allows Fast Parcel Operators (FPOs) and third party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
+This API allows Fast Parcel Operators (FPOs) software developers and third party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
 The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
@@ -109,12 +109,6 @@ An example of an unsuccessful response:
 ## Error Responses
 
 An introduction to the expected Success and Error Responses:
-
-```code
-200
-description:
-Success - Authorised. A list of EORI Numbers provided with their authorised status as boolean = 'true'. The resource has been fetched and transmitted in the message body.
-```
 
 ```code          
 400
