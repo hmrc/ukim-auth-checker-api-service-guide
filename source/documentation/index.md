@@ -81,7 +81,7 @@ curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-m
 }
 ```
 
-Example of a succesful response:
+Example of a successful response:
 
 ```code
 {
@@ -99,8 +99,8 @@ An example of an unsuccessful response:
 
 ```code
 {
-"code": "MISSING_CREDENTIALS",
-"message": "Authentication information is not provided"
+  "code": "MISSING_CREDENTIALS",
+  "message": "Authentication information is not provided"
 }
 ```
 
