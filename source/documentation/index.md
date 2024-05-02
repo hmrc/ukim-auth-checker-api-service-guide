@@ -64,7 +64,7 @@ The base URLs of the sandbox and production environments are as follows:
 ```code
 Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 
-Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 ```
 
 ### Validating a collection of EORI numbers
