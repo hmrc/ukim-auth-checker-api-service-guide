@@ -1,11 +1,11 @@
 ---
-title: UK Internal Market Scheme (UKIMS) Auhorisation Checker API Service Guide
+title: UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 weight: 1
 description: For Fast Parcel Operators (FPOs), Agents transporting goods GB/NI, B2B Agents for GB/NI, Third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
 ---
 Version 1.0 issued April 30 2024
 
-# UK Internal Market Scheme (UKIMS) Auhorisation Checker API Service Guide
+# UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 This API allows Fast Parcel Operators (FPOs) and other third party users to check the authorisation of EORI numbers. Learn about the processes involved in passing EORI numbers to check UKIM validity for Fast Parcel Operators (FPOs) and other third party users.
 
 ## API Overview 
@@ -30,7 +30,7 @@ In summary, having an EORI number is essential for anyone involved in internatio
 
 ## API Status
 
-This version of the UKIMS Checker API:
+This version of the UKIMS Authorisation Checker API:
 
 - supports **only** the UKIMS Checker API v1.0
 - is currently **not** ready for testing
@@ -40,7 +40,7 @@ This version of the UKIMS Checker API:
 
 - Request the UKIM Authorisation Status of 1-3000 EORIs passed as an array.
 
-The API endpoint relates only to Great Britain and Northern Ireland.  Eventually, you can also use the HMRC sandbox environment to run tests for Great Britain and Northern Ireland transit movements.
+The API endpoint relates only to Great Britain and Northern Ireland. You can also use the HMRC sandbox environment to run tests for Great Britain and Northern Ireland transit movements.
 
 ## Developer Setup
 
@@ -53,17 +53,19 @@ You can view all the applications you have currently registered on the Developer
 
 ## Getting started
 
-Making API requests
-Before sending any requests to UKIMS Checker API, make sure that you are using the following points
+### Making API requests
+Before sending any requests to the UKIMS Checker API, make sure that you are using the following points
 in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see Fast Parcel Operators reference guide
 
 The base URLs of the sandbox and production environments are as follows:
 
+```code
 Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 
 Production	https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
+```
 
 ### Validating a collection of EORI numbers
 
