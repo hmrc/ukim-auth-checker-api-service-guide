@@ -3,14 +3,14 @@ title: UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 weight: 1
 description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
 ---
-Version 1.0 issued May 2 2024
+Version 1.0 issued May 7th 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
-This document introduces Fast Parcel Operators (FPOs), software developers and other third party users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIM validity.
+This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIM validity.
 
 ## API Overview 
 
-This API allows Fast Parcel Operators (FPOs) software developers and third party users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
+This API allows Fast Parcel Operators (FPOs) software developers and third party software users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
 The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
@@ -30,21 +30,20 @@ In summary, having an EORI number is essential for anyone involved in internatio
 
 ## API Status
 
-This version of the UKIMS Checker API:
+This version of the UKIMS Authorisation Checker API:
 
-- supports **only** the UKIMS Checker API v1.0
+- supports **only** the UKIMS Authorisation Checker API v1.0
 - is currently **not** ready for testing
 - will **not** be ready for use in production until the service goes live 
 
 ### Use the API to:
 
 - Request the UKIM Authorisation Status of 1-3000 EORIs passed as an array.
-
-The API endpoint relates only to Great Britain and Northern Ireland.  Eventually, you can also use the HMRC sandbox environment to run tests for Great Britain and Northern Ireland transit movements.
+- Run tests in the HMRC sandbox environment.
 
 ## Developer Setup
 
-To develop using the UKIMS Checker API you must:
+To develop using the UKIMS Authorisation Checker API you must:
 
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
@@ -54,7 +53,7 @@ You can view all the applications you have currently registered on the Developer
 ## Getting started
 
 Making API requests
-Before sending any requests to UKIMS Checker API, make sure that you are using the following points
+Before sending any requests to UKIMS Authorisation Checker API, make sure that you are using the following points
 in your software:
 - the correct URL for the environment and API version number (see below)
 - the correct header contents and payload information - see Fast Parcel Operators reference guide
@@ -69,7 +68,7 @@ Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in  UKIMS Checker API v1.0 Reference Guide [here](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
+Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](ukim-auth-checker-api/resources/public/api/conf/1.0).
 
 ### Example of a POST request
 
@@ -97,7 +96,7 @@ Example of a successful response:
 }
 ```
 
-An example of an unsuccessful response:
+An example of an unsuccessful response, typically generated when authentication information is not provided:
 
 ```code
 {
@@ -113,7 +112,7 @@ An introduction to the expected Error Responses:
 ```code          
 400
 description: 
-Validation failure. The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
+Validation failure. The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing.
 ```
 
 ```code
@@ -155,6 +154,6 @@ Internal Server Error. The server has encountered a situation it does not know h
 ## API rate limiting
 Each software house should register a single application with HMRC. This application will be used to identify the software house during the OAuth 2.0 grant flow and will also be used in subsequent per user API calls. We limit the number of requests that each application can make. This protects our backend service against excessive load and encourages real-time API calls over batch processing.
 
-We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team at email SDSTeam@hmrc.gov.uk
+We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team at email [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk)
 
 
