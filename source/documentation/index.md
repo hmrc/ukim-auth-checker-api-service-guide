@@ -30,9 +30,9 @@ In summary, having an EORI number is essential for anyone involved in internatio
 
 ## API Status
 
-This version of the UKIMS Checker API:
+This version of the UKIMS Authorisation Checker API:
 
-- supports **only** the UKIMS Checker API v1.0
+- supports **only** the UKIMS Authorisation Checker API v1.0
 - is currently **not** ready for testing
 - will **not** be ready for use in production until the service goes live 
 
@@ -68,7 +68,7 @@ Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in  UKIMS Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](ukim-auth-checker-api/resources/public/api/conf/1.0).
+Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](ukim-auth-checker-api/resources/public/api/conf/1.0).
 
 ### Example of a POST request
 
