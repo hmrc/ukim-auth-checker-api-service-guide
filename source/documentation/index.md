@@ -1,19 +1,19 @@
 ---
 title: UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 weight: 1
-description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
+description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIMS validity.
 ---
-Version 1.0 issued May 7th 2024
+Version 1.0 issued May 8th 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
-This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIM validity.
+This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIMS validity.
 
 ## API Overview 
 
-This API allows Fast Parcel Operators (FPOs) software developers and third party software users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
+This API allows Fast Parcel Operators (FPOs) software developers and third party software users to check if the holders of provided EORI Numbers have a valid UKIMS authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
+The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIMS Authorisation Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -38,7 +38,7 @@ This version of the UKIMS Authorisation Checker API:
 
 ### Use the API to:
 
-- Request the UKIM Authorisation Status of 1-3000 EORIs passed as an array.
+- Request the UKIMS Authorisation Status of 1-3000 EORIs passed as an array.
 - Run tests in the HMRC sandbox environment.
 
 ## Developer Setup
@@ -52,11 +52,12 @@ You can view all the applications you have currently registered on the Developer
 
 ## Getting started
 
-Making API requests
+### Making API requests
+
 Before sending any requests to UKIMS Authorisation Checker API, make sure that you are using the following points
 in your software:
-- the correct URL for the environment and API version number (see below)
-- the correct header contents and payload information - see Fast Parcel Operators reference guide
+- the correct URL for the environment and API version number
+- the correct header contents and payload information - see the Fast Parcel Operators reference guide
 
 The base URLs of the sandbox and production environments are as follows:
 
@@ -68,7 +69,7 @@ Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api?filter=customs).
+Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
 
 ### Example of a POST request
 
@@ -96,7 +97,17 @@ Example of a successful response:
 }
 ```
 
-An example of an unsuccessful response, typically generated when authentication information is not provided:
+An example of an unsuccessful response, in this case a 401, typically generated when authentication information is not provided in this case by omitting a bearer token. For example:
+
+POST Request payload:
+
+```code
+headers: {
+    "Content-Type" : "application/json",
+    "Authorisation": `*empty*`
+  }
+```
+Response: 
 
 ```code
 {
@@ -107,49 +118,7 @@ An example of an unsuccessful response, typically generated when authentication 
 
 ## Error Responses
 
-An introduction to the expected Error Responses:
-
-```code          
-400
-description: 
-Validation failure. The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing.
-```
-
-```code
-401
-description:
-Unauthorised. Authentication information is not provided.
-```                
-
-```code
-403
-description:
-Forbidden. The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike 401 Unauthorized, the client's identity is known to the server.
-```
-
-```code
-405
-description:
-Method not allowed. The request method is known by the server but is not supported by the target resource. 
-```
-
-```code
-406
-description:
-Not acceptable. This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content that conforms to the criteria given by the user agent.
-```
-
-```code
-429
-description:
-Request in excess of rate limit. The user has sent too many requests in a given amount of time ( See "API rate limiting" below).
-```
-
-```code
-500
-description: 
-Internal Server Error. The server has encountered a situation it does not know how to handle.
-```
+A detailed description of the error responses for this API can be found in the [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
  
 ## API rate limiting
 Each software house should register a single application with HMRC. This application will be used to identify the software house during the OAuth 2.0 grant flow and will also be used in subsequent per user API calls. We limit the number of requests that each application can make. This protects our backend service against excessive load and encourages real-time API calls over batch processing.
