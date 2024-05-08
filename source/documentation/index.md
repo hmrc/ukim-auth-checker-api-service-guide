@@ -1,19 +1,19 @@
 ---
 title: UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 weight: 1
-description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIM validity.
+description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software houses, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIMS validity.
 ---
-Version 1.0 issued May 7th 2024
+Version 1.0 issued May 8th 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
-This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIM validity.
+This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIMS validity.
 
 ## API Overview 
 
-This API allows Fast Parcel Operators (FPOs) software developers and third party software users to check if the holders of provided EORI Numbers have a valid UKIM authorisation.
+This API allows Fast Parcel Operators (FPOs) software developers and third party software users to check if the holders of provided EORI Numbers have a valid UKIMS authorisation.
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
-The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIM Authorisation Status of between 1 to 3000 EORIs passed as an array. 
+The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIMS Authorisation Status of between 1 to 3000 EORIs passed as an array. 
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -52,7 +52,8 @@ You can view all the applications you have currently registered on the Developer
 
 ## Getting started
 
-Making API requests
+### Making API requests
+
 Before sending any requests to UKIMS Authorisation Checker API, make sure that you are using the following points
 in your software:
 - the correct URL for the environment and API version number (see below)
@@ -68,7 +69,7 @@ Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api?filter=customs).
+Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0).
 
 ### Example of a POST request
 
