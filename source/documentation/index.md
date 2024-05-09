@@ -6,7 +6,7 @@ description: For Fast Parcel Operators (FPOs), Software developers, Agents trans
 Version 1.0 issued May 8th 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
-This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme (UKIMS) Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIMS validity.
+This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme UKIMS Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIMS validity.
 
 ## API Overview 
 
@@ -43,7 +43,7 @@ This version of the UKIMS Authorisation Checker API:
 
 ## Developer Setup
 
-To develop using the UKIMS Authorisation Checker API you must:
+To develop using the UKIMS Authorisation Checker API, you must:
 
 - be familiar with HTTP, RESTful services, XML and OAuth2
 - be registered as a developer on the HMRC Developer Hub
@@ -54,10 +54,12 @@ You can view all the applications you have currently registered on the Developer
 
 ### Making API requests
 
-Before sending any requests to UKIMS Authorisation Checker API, make sure that you are using the following points
+Before sending any requests to the UKIMS Authorisation Checker API, make sure that you are addressing the following points
 in your software:
 - the correct URL for the environment and API version number
-- the correct header contents and payload information - see the Fast Parcel Operators reference guide
+- the correct header contents and payload information
+
+For details, see the [UKIMS Authorisation Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page)
 
 The base URLs of the sandbox and production environments are as follows:
 
@@ -69,7 +71,7 @@ Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisat
 
 ### Validating a collection of EORI numbers
 
-Link to POST method in UKIMS Authorisation Checker API v1.0 Reference Guide [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
+Link to POST method in the [UKIMS Authorisation Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
 
 ### Example of a POST request
 
@@ -97,7 +99,7 @@ Example of a successful response:
 }
 ```
 
-An example of an unsuccessful response, in this case a 401, typically generated when authentication information is not provided in this case by omitting a bearer token. For example:
+An example of an unsuccessful response, in this case a 401 error. This error response is typically generated when authentication information is not provided, in this example by omitting a bearer token:
 
 POST Request payload:
 
