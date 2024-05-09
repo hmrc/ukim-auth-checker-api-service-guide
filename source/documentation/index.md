@@ -120,7 +120,7 @@ Response:
 
 ## Error Responses
 
-A detailed description of the error responses for this API can be found in the [UKIMS Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
+A detailed description of the error responses for this API can be found in the [UKIMS Authorisation Checker API v1.0 Reference Guide](/api-documentation/docs/api/service/ukim-auth-checker-api/1.0/oas/page).
  
 ## API rate limiting
 Each software house should register a single application with HMRC. This application will be used to identify the software house during the OAuth 2.0 grant flow and will also be used in subsequent per user API calls. We limit the number of requests that each application can make. This protects our backend service against excessive load and encourages real-time API calls over batch processing.
