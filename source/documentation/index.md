@@ -56,6 +56,7 @@ You can view all the applications you have currently registered on the Developer
 
 Before sending any requests to the UKIMS Authorisation Checker API, make sure that you are addressing the following points
 in your software:
+
 - the correct URL for the environment and API version number
 - the correct header contents and payload information
 
@@ -68,6 +69,7 @@ Sandbox	https://test-api.service.hmrc.gov.uk/customs/uk-internal-market/authoris
 
 Production https://api.service.hmrc.gov.uk/customs/uk-internal-market/authorisations
 ```
+
 
 ### Validating a collection of EORI numbers
 
