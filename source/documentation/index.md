@@ -45,7 +45,7 @@ This version of the UKIMS Authorisation Checker API:
 
 To develop using the UKIMS Authorisation Checker API, you must:
 
-- be familiar with HTTP, RESTful services, XML and OAuth2
+- be familiar with HTTP, RESTful services, JSON and OAuth2
 - be registered as a developer on the HMRC Developer Hub
 
 You can view all the applications you have currently registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
