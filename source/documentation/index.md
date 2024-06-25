@@ -138,4 +138,7 @@ Each software house should register a single application with HMRC. This applica
 
 We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team at email [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk)
 
+## Changelog
+
+You can find the changelog for this document in the [UKIMS Authorisation Checker API v1.0 Service Guide](https://github.com/hmrc/ctc-traders-phase5-service-guide/wiki/CTC-Traders-API-phase-5-service-guide-changelog) GitHub wiki.
 
