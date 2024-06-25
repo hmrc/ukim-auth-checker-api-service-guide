@@ -41,13 +41,9 @@ This version of the UKIMS Authorisation Checker API:
 ## User Journeys
 These journeys show examples of use:
 
-[Developer setup](#Developer-Setup)
-
-[Making API Requests](#Making-API-Requests)
-
-[Validating a collection of EORI numbers](#Validating-a-collection-of-EORI-numbers)
-
-
+- [Developer setup](#Developer-Setup)
+- [Making API Requests](#Making-API-Requests)
+- [Validating a collection of EORI numbers](#Validating-a-collection-of-EORI-numbers)
 
 ## Use the API to:
 
