@@ -36,9 +36,16 @@ This version of the UKIMS Authorisation Checker API:
 
 - supports **only** the UKIMS Authorisation Checker API v1.0
 - is currently **not** ready for testing
-- will **not** be ready for use in production until the service goes live 
+- will **not** be ready for use in production until the service goes live
 
-### Use the API to:
+## User Journeys
+These journeys show examples of use:
+
+- [Developer setup](#Developer-Setup)
+- [Making API Requests](#Making-API-Requests)
+- [Validating a collection of EORI numbers](#Validating-a-collection-of-EORI-numbers)
+
+## Use the API to:
 
 - Request the UKIMS Authorisation Status of 1-3000 EORIs passed as an array.
 - Run tests in the HMRC sandbox environment.
@@ -131,4 +138,7 @@ Each software house should register a single application with HMRC. This applica
 
 We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application. If you believe that your application will sustain traffic load above this value, contact the SDS Team at email [SDSTeam@hmrc.gov.uk](mailto:SDSTeam@hmrc.gov.uk)
 
+## Changelog
+
+You can find the changelog for this document in the [UKIMS Authorisation Checker API v1.0 Service Guide](https://github.com/hmrc/ukim-auth-checker-api-service-guide/wiki/UK-Internal-Market-Scheme-(UKIMS)-Authorisation-Checker-API-Service-Guide-Changelog) GitHub wiki.
 
