@@ -36,9 +36,20 @@ This version of the UKIMS Authorisation Checker API:
 
 - supports **only** the UKIMS Authorisation Checker API v1.0
 - is currently **not** ready for testing
-- will **not** be ready for use in production until the service goes live 
+- will **not** be ready for use in production until the service goes live
 
-### Use the API to:
+## User Journeys
+These journeys show examples of use:
+
+[Developer setup](#Developer-Setup)
+
+[Making API Requests](#Making-API-Requests)
+
+[Validating a collection of EORI numbers](#Validating-a-collection-of-EORI-numbers)
+
+
+
+## Use the API to:
 
 - Request the UKIMS Authorisation Status of 1-3000 EORIs passed as an array.
 - Run tests in the HMRC sandbox environment.
