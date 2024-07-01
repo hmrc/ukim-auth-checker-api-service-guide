@@ -24,7 +24,7 @@ The acronym EORI stands for Economic Operators Registration and Identification. 
 
 A breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the UK is as follows:
 
-```code
+```python
 GB205672212000
 ```
 
