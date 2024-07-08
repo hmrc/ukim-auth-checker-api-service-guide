@@ -31,7 +31,7 @@ GB205672212000
 - GB: Indicates that the business is based in the UK.
 - 205672212: Represents the business’s VAT Registration Number.
 - 000: These three zeros are always added to the end of a UK EORI number.
-- The total number of characters contained by the EORI (including the prefix GB or XI) is bewteen 12 and 15.
+- Total number of characters permitted for the EORI (including the prefix GB or XI) is between 12 and 15.
 
 In summary, having an EORI number is essential for anyone involved in international trade, as it allows customs authorities to monitor and track shipments effectively.
 
