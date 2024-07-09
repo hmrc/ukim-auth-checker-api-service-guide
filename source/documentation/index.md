@@ -19,6 +19,8 @@ The API is based on REST principles with a single POST method endpoint that retu
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
+
+
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU)-12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
 
@@ -31,9 +33,24 @@ GB205672212000
 - GB: Indicates that the business is based in the UK.
 - 205672212: Represents the business’s VAT Registration Number.
 - 000: These three zeros are always added to the end of a UK EORI number.
-- Total number of characters permitted for the EORI (including the prefix GB or XI) is between 12 and 15.
+- Total number of characters permitted for the EORI (including the prefix GB or XI) is 14.
 
 In summary, having an EORI number is essential for anyone involved in international trade, as it allows customs authorities to monitor and track shipments effectively.
+
+## Process Flow
+
+```mermaid
+sequenceDiagram
+    participant Third Party Software
+    participant OAuth
+    participant UKIMS EORI Auth Checker
+
+    Third Party Software->>OAuth: Client Secret
+    OAuth-->>Third Party Software: Bearer Token
+
+    Third Party Software->>UKIMS EORI Auth Checker: POST EORI Check Values + Bearer Token
+    UKIMS EORI Auth Checker-->>Third Party Software: Result of Authorisation Check (true/false)
+```
 
 ## API Status
 
@@ -59,10 +76,10 @@ These journeys show practical preparation and use of the API:
 
 To develop using the UKIMS Authorisation Checker API, you must:
 
-- be familiar with HTTP, RESTful services, JSON and OAuth2
+- be familiar with HTTP, RESTful services, JSON and OAuth
 - be registered as a developer on the HMRC Developer Hub
 
-You can view all the applications you have currently registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
+You can view all the applications you have currently registered on the [Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/api) Applications page, where you can also administer API subscriptions and application credentials.
 
 ## Getting started
 
@@ -108,7 +125,7 @@ Example of a successful response:
   "date": "2024-02-31",
   "eoris": [
     {
-      "eori": "GB123123123123",
+      "eori": "GB123123123000",
       "authorised": true
     }
   ]
