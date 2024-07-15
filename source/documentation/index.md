@@ -24,10 +24,10 @@ The API is based on REST principles with a single POST method endpoint that retu
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU)-12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
 
-A breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the British mainland or Northern Ireland is as follows:
+Below is a breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the GB or Northern Ireland is as follows:
 
-```python
-GB205672212000  # EORI originating in the British mainland i.e Wales, England or Scotland.
+```code
+GB205672212000  # EORI originating in the GB i.e Wales, England or Scotland.
 XI347643313000  # EORI originating in Northern Ireland.
 ```
 
