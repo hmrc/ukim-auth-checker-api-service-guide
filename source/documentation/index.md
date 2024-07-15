@@ -33,7 +33,7 @@ XI347643313000  # EORI originating in Northern Ireland.
 
 - GB or XI: Indicates that the business is based either in mainland Britain (GB) or Northern Ireland (XI).
 - 205672212: Represents the business’s VAT Registration Number.
-- 000: These three zeros are always added to the end of a UK EORI number.
+- 000: These three zeros are always added to the end of a UK or Northern Ireland EORI number.
 - Total number of characters permitted for the EORI (including the prefix GB or XI) is 14.
 
 In summary, having an EORI number is essential for anyone involved in international trade, as it allows customs authorities to monitor and track shipments effectively.
