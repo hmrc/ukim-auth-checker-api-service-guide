@@ -24,10 +24,11 @@ The API is based on REST principles with a single POST method endpoint that retu
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU)-12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
 
-A breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the UK is as follows:
+A breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the British mainland or Northern Ireland is as follows:
 
 ```python
-GB205672212000
+GB205672212000  # EORI originating in the British mainland i.e Wales, England or Scotland.
+XI347643313000  # EORI originating in Northern Ireland.
 ```
 
 - GB: Indicates that the business is based in the UK.
@@ -77,9 +78,9 @@ These journeys show practical preparation and use of the API:
 To develop using the UKIMS Authorisation Checker API, you must:
 
 - be familiar with HTTP, RESTful services, JSON and OAuth
-- be registered as a developer on the HMRC Developer Hub
+- be registered as a developer on the [HMRC Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/api)
 
-You can view all the applications you have currently registered on the [Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/api) Applications page, where you can also administer API subscriptions and application credentials.
+You can view all the applications you have currently registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
 
 ## Getting started
 
