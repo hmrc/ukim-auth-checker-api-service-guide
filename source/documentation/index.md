@@ -46,7 +46,7 @@ sequenceDiagram
     participant OAuth
     participant UKIMS EORI Auth Checker
 
-    Third Party Software->>OAuth: Client Secret
+    Third Party Software->>OAuth: Client ID + Secret
     OAuth-->>Third Party Software: Bearer Token
 
     Third Party Software->>UKIMS EORI Auth Checker: POST EORI Check Values + Bearer Token
