@@ -3,7 +3,7 @@ title: UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 weight: 1
 description: For Fast Parcel Operators (FPOs), Software developers, Agents transporting goods GB/NI, B2B Agents for GB/NI, third party software users, designers, product owners or business analysts. Processes involved in passing EORI numbers to check UKIMS validity.
 ---
-Version 1.0 issued June 1st 2024
+Version 1.0 issued July 15th 2024
 
 # UK Internal Market Scheme (UKIMS) Authorisation Checker API Service Guide
 This document introduces Fast Parcel Operators (FPOs), software developers and other third party software users to the UK Internal Market Scheme UKIMS Authorisation Checker API. Learn here about the processes involved in passing EORI numbers to check UKIMS validity.
@@ -19,21 +19,39 @@ The API is based on REST principles with a single POST method endpoint that retu
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
+
+
 ### What is an EORI?
 The acronym EORI stands for Economic Operators Registration and Identification. It is a unique identification number used by customs authorities throughout the European Union (EU)-12. This system, instituted on July 1, 2009, replaced the older Trader’s Unique Reference Number (TURN). The EORI number plays a critical role in facilitating the import and export of goods both within the EU and with countries outside of it. Whether you’re a business or an individual, understanding the EORI system is crucial if you plan to engage in international trade. For those based in the UK, HM Revenue and Customs (HMRC) are responsible for allocating these numbers.
 
-A breakdown of the EORI number format for UK VAT-registered businesses. A typical EORI originating in the UK is as follows:
+EORI numbers handled by this API are prefixed either GB or XI, representing Great Britain or Nothern Ireland respectively. Below is a breakdown of the EORI number format for UK/NI VAT-registered businesses. A typical EORI originating in GB or Northern Ireland is as follows:
 
-```python
-GB205672212000
+```code
+GB205672212000  # EORI originating in GB i.e Wales, England or Scotland.
+XI347643313000  # EORI originating in Northern Ireland.
 ```
 
-- GB: Indicates that the business is based in the UK.
-- 205672212: Represents the business’s VAT Registration Number.
-- 000: These three zeros are always added to the end of a UK EORI number.
-- Total number of characters permitted for the EORI (including the prefix GB or XI) is between 12 and 15.
+- GB or XI: Indicates that the business is based either in mainland Britain (GB) or Northern Ireland (XI).
+- 205672212: Linked to the business’s VAT Registration Number.
+- 000: These three zeros are always added to the end of an EORI number.
+- Total number of characters permitted for the EORI (including the prefix GB or XI) is 14.
 
 In summary, having an EORI number is essential for anyone involved in international trade, as it allows customs authorities to monitor and track shipments effectively.
+
+## Process Flow
+
+```mermaid
+sequenceDiagram
+    participant Third Party Software
+    participant OAuth
+    participant UKIMS EORI Auth Checker
+
+    Third Party Software->>OAuth: Client ID + Secret
+    OAuth-->>Third Party Software: Bearer Token
+
+    Third Party Software->>UKIMS EORI Auth Checker: POST EORI Check Values + Bearer Token
+    UKIMS EORI Auth Checker-->>Third Party Software: Result of Authorisation Check (true/false)
+```
 
 ## API Status
 
@@ -59,8 +77,8 @@ These journeys show practical preparation and use of the API:
 
 To develop using the UKIMS Authorisation Checker API, you must:
 
-- be familiar with HTTP, RESTful services, JSON and OAuth2
-- be registered as a developer on the HMRC Developer Hub
+- be familiar with HTTP, RESTful services, JSON and OAuth
+- be registered as a developer on the [HMRC Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/api)
 
 You can view all the applications you have currently registered on the Developer Hub Applications page, where you can also administer API subscriptions and application credentials.
 
@@ -96,7 +114,7 @@ curl --location POST 'https://test-api.service.hmrc.gov.uk/customs/uk-internal-m
 {
 "date": "2024-02-31",
 "eoris": [
-"GB123123123123"
+"GB123123123000"
 ]
 }
 ```
@@ -108,7 +126,7 @@ Example of a successful response:
   "date": "2024-02-31",
   "eoris": [
     {
-      "eori": "GB123123123123",
+      "eori": "GB123123123000",
       "authorised": true
     }
   ]
