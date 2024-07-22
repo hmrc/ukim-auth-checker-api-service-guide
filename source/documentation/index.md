@@ -16,6 +16,8 @@ This API allows Fast Parcel Operators (FPOs) software developers and third party
 The aim is to avoid possible rejections of goods moving through from GB-NI, which could physically stop the B2B parcels.
     
 The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIMS Authorisation Status of between 1 to 3000 EORIs passed as an array. 
+
+A sequence diagram showing the flow of messages between a third party software application and the UKIMS Authorisation Checker API is shown [below](#Process Flow).
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
@@ -39,19 +41,7 @@ XI347643313000  # EORI originating in Northern Ireland.
 In summary, having an EORI number is essential for anyone involved in international trade, as it allows customs authorities to monitor and track shipments effectively.
 
 ## Process Flow
-
-```mermaid
-sequenceDiagram
-    participant Third Party Software
-    participant OAuth
-    participant UKIMS EORI Auth Checker
-
-    Third Party Software->>OAuth: Client ID + Secret
-    OAuth-->>Third Party Software: Bearer Token
-
-    Third Party Software->>UKIMS EORI Auth Checker: POST EORI Check Values + Bearer Token
-    UKIMS EORI Auth Checker-->>Third Party Software: Result of Authorisation Check (true/false)
-```
+![](../images/UKIMS-Checker-Process-Flow.png)
 
 ## API Status
 
