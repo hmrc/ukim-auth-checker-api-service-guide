@@ -17,7 +17,7 @@ The aim is to avoid possible rejections of goods moving through from GB-NI, whic
     
 The API is based on REST principles with a single POST method endpoint that returns data in JSON format. It uses standard HTTP error response codes. Use the API to request the UKIMS Authorisation Status of between 1 to 3000 EORIs passed as an array. 
 
-A sequence diagram showing the flow of messages between a third party software application and the UKIMS Authorisation Checker API is shown [below](#Process Flow).
+A sequence diagram showing the flow of messages between a third party software application and the UKIMS Authorisation Checker API is shown [below](#process-flow).
     
 **Note:** The API endpoint relates only to Great Britain and Northern Ireland.
 
